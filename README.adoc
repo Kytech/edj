@@ -1,3 +1,24 @@
+= Fork of Ian Darwin's Edj for Data Structures and Algorithms Final Project
+
+My Data Structures and Algorithms project is meant to give me an opportunity to better explore
+data structures as they may be used in real software. I've always found stacks to be interesting,
+and I felt that a great example of their use could be in dealing with edit histories, which lead
+me to look into writing a text editor since that would likely give me a few more structures to work
+with as well.
+
+I came across Ian Darwin's excellent article about building a text editor in Java when I was deciding
+on what to do for this project. I found his article to be a great read and I would highly recommend reading 
+https://blogs.oracle.com/javamagazine/for-the-fun-of-it-writing-your-own-text-editor-part-1[his series
+on building edj] if you are interested in learning more about building a text editor.
+
+I noticed that Ian writes about implementing an undo feature and provides some code that
+implements an undo feature. I thought that it would be a bit of an interesting challenge
+to reimplement the undo feature in a way that also supports redoing. I decided to make this my
+main focus instead of writing an entire editor from scratch for my project. The general idea here involves
+dealing with tracking changes through a sort of dual-stack system using an undo and a redo stack, which I
+thought could be abstracted into it's own sort of data structure/class as well. Building this dual-stack 
+undo/redo structure is the focus of my project.
+
 = edj, sedj, and vedj
 
 Edj (pronounced like the English word "edge") is the skeleton of 
