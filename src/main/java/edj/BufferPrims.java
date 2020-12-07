@@ -61,4 +61,14 @@ public interface BufferPrims {
 		throw new UnsupportedOperationException();
 	}
 
+	// Interface additions to support redoing - Kyler N
+
+	/**
+	 * Return true if redo is supported.
+	 * @return true if redo is supported.
+	 */
+	default boolean isRedoSupported() { return false; }
+
+	default void redo() { throw new UnsupportedOperationException(); }
+
 }
