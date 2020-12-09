@@ -20,7 +20,7 @@ import java.util.Iterator;
  * @param <E>
  * @author Kyler N
  */
-public abstract class AbstractHistoryStack<E> implements HistoryStack<E>{
+public abstract class AbstractHistoryStack<E> implements HistoryStack<E> {
 
     protected Deque<E> stack;
     protected Deque<E> historyStack;
