@@ -55,4 +55,49 @@ public class EditHistoryStack<E> extends AbstractHistoryStack<E> {
         historyStack.push(element);
         return element;
     }
+
+    private static void editHistoryStackDemo() {
+        HistoryStack<Integer> stack = new EditHistoryStack<>();
+
+        System.out.println("Demo of Edit History Stack.\n");
+        System.out.println("Creating edit history stack and pushing values '1', '2', and '3'...");
+
+        stack.push(1);
+        stack.push(2);
+        stack.push(3);
+
+        System.out.println("Contents of stack:");
+        for (Object item : stack.toArray())
+            System.out.println(item.toString());
+
+        System.out.println("Now popping the top two items off stack and DISCARDING the popped value!...");
+
+        stack.pop();
+        stack.pop();
+
+        System.out.println("Contents of stack:");
+
+        for (Object item : stack.toArray())
+            System.out.println(item.toString());
+
+        System.out.println("Invoking the history stack's unpop method twice to restore popped elements back to stack one by one...");
+
+        stack.unpop();
+
+        System.out.println("Values of the stack after unpopping once:");
+
+        for (Object item : stack.toArray())
+            System.out.println(item.toString());
+
+        stack.unpop();
+
+        System.out.println("Values of the stack after unpopping twice:");
+
+        for (Object item : stack.toArray())
+            System.out.println(item.toString());
+    }
+
+    public static void main(String args[]) {
+        editHistoryStackDemo();
+    }
 }
