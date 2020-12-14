@@ -38,9 +38,13 @@ public class EditHistoryStack<E> extends AbstractHistoryStack<E> {
 
     @Override
     public E unpop() {
-        E element = historyStack.pop();
-        stack.push(element);
-        return element;
+        if (!historyStack.isEmpty()) {
+            E element = historyStack.pop();
+            stack.push(element);
+            return element;
+        } else {
+            return null;
+        }
     }
 
     @Override
@@ -51,9 +55,13 @@ public class EditHistoryStack<E> extends AbstractHistoryStack<E> {
 
     @Override
     public E pop() {
-        E element = stack.pop();
-        historyStack.push(element);
-        return element;
+        if (!stack.isEmpty()) {
+            E element = stack.pop();
+            historyStack.push(element);
+            return element;
+        } else {
+            return null;
+        }
     }
 
     private static void editHistoryStackDemo() {
