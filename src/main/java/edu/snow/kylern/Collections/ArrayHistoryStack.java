@@ -265,6 +265,6 @@ public class ArrayHistoryStack<E> implements HistoryStack<E> {
 
     @Override
     public Iterator<E> descendingIterator() {
-        return new ArrayHistoryStackIterator(stackHead, 0);
+        return new ArrayHistoryStackIterator(stackHead, 0, true);
     }
 }
