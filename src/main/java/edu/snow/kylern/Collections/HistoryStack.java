@@ -25,6 +25,9 @@ import java.util.NoSuchElementException;
  * creating a strict LIFO-only view of a Deque. This interface provides defaults for these redirections which can
  * be overridden if different behavior is desired.
  *
+ * Depending on the desired behavior, an implementation may also want to return an iterator that does not permit
+ * the use of the iterator's remove() method
+ *
  * @param <E>
  * @author Kyler N
  */

@@ -3,6 +3,8 @@ package edu.snow.kylern.Collections;
 import java.util.ArrayDeque;
 import java.util.Collection;
 
+// TODO: This implementation should override the default iterators to prevent iterator.remove()
+
 /**
  * Concrete implementation of a HistoryStack to be used for a forward/backward
  * edit or navigation history.

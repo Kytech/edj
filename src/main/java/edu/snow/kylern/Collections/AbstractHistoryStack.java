@@ -17,6 +17,14 @@ import java.util.Iterator;
  * expected behaviors of these methods. Additional methods can be overridden
  * if more complex behaviors are wanted.
  *
+ * The behavior of an implementation's iterator.remove() method will be determined
+ * by the type of Deque that a concrete implementation specifically initializes the
+ * stack and historyStack class fields/properties with. If the behavior desired is
+ * different than the behavior provided by the type of Deque used for these fields,
+ * the concrete implementing class should override the iterator-returning methods so
+ * that it returns a custom iterator that will prevent use of the iterator.remove()
+ * method.
+ *
  * @param <E>
  * @author Kyler N
  */
